@@ -5,10 +5,15 @@ import sqlite3, requests
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hola Pythonisos, ¿Como estan? Saludos")
+    dato = {
+        "nombre": "Alejandro",
+        "edad": 45,
+        "direccion": {"calle": "Catamarca 2112", "localidad": "Quilmes Oeste"}
+    }
+    return render(request, "blog/index.html", dato)
 
 def acerca_de(request):
-    return HttpResponse("Hola soy la pagina NOSOTROS..!!!!!")
+    return render(request, "blog/acerca-de.html")
 
 def clientes(request):
     conn = sqlite3.connect('contabilidad.sqlite')
