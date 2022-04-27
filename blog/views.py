@@ -8,7 +8,7 @@ def index(request):
     dato = {
         "nombre": "Alejandro",
         "edad": 45,
-        "direccion": {"calle": "Catamarca 2112", "localidad": "Quilmes Oeste"}
+        "direccion": {"calle": "Ancha 2112", "localidad": "Quilmes Oeste", "provincia": "Buenos Aires", "pais": "Argentina"}
     }
     return render(request, "blog/index.html", dato)
 
