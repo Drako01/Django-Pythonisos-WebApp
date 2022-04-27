@@ -7,7 +7,7 @@ import sqlite3, requests
 def index(request):
     dato = {
         "nombre": "Alejandro",
-        "edad": 45,
+        "edad": 46,
         "direccion": {"calle": "Cuchuflito 2112", "localidad": "Quilmes Oeste", "provincia": "Buenos Aires", "pais": "Argentina"}
     }
     return render(request, "blog/index.html", dato)
