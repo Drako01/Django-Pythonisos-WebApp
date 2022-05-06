@@ -15,15 +15,12 @@
     <div class="cuerpo">
         <h1>¡Bienvenido {{ nombre }}!</h1>
         <h2>Usted tiene {{ edad }} años de Edad.!</h2>
-        <h2>y vive en la calle {{ direccion.calle }} de la Ciudad de {{ direccion.localidad }} </h2>
-        <h3> {{ direccion.provincia }}, {{ direccion.pais }} </h3></br>
-
-        </br>
+        <h2>y vive en la calle {{ direccion.calle }} con número {{ direccion.numero }} de la Ciudad de {{ direccion.localidad }} </h2>
+        <h3> {{ direccion.provincia }}, {{ direccion.pais }} </h3></br>        
         <h3>Su Sitio Web es:</h3>
         <div class="logo">
-            <img src=" {% static "img/logo.png" %} " alt="" >
-        </div>
-        
+            <img src=" {% static "img/logo.png" %} " alt="ArmoTuSitio" >
+        </div>        
         <a href="http://armotusitio.com" target="_blank" rel="noopener noreferrer"> <button>Sitio de Ale</button> </a>
     </div>
     <div class="hijos">
@@ -31,13 +28,12 @@
         <h3>Usted tiene Hijos.!!</h3>
         {% else %}
         <h3>Usted No tiene Hijos.!!!</h3>
-        {% endif %}
-        </br>
+        {% endif %}        
         <h2>Su Familia esta compuesta por:</h2>
         <h3>
             <ul>
-                {% for hijo in hijos %}
-                <li>{{ hijo }}</li>
+                {% for persona in familia %}
+                <li>{{ persona }}</li>
                 {% endfor %}
             </ul>
         </h3>

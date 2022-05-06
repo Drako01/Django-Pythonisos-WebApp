@@ -7,11 +7,11 @@ import sqlite3, requests
 # Create your views here.
 def index(request):
     dato = {
-        "nombre": "Alejandro",
-        "edad": 46,
-        "direccion": {"calle": "Cuchuflito 2112", "localidad": "Quilmes Oeste", "provincia": "Buenos Aires", "pais": "Argentina"},
+        "nombre": "Marcelo Mansilla",
+        "edad": 50,
+        "direccion": {"calle": "36", "numero": "400" ,"localidad": "La Plata", "provincia": "Buenos Aires", "pais": "Argentina"},
         "cant_hijos": 2,
-        "hijos":["Alejandro", "Barbara", "Fede", "Lola", "Daisy"],
+        "familia":["Alejandro", "Barbara", "Fede", "Lola", "Daisy"],
     }
     return render(request, "blog/index.html", dato)
 
