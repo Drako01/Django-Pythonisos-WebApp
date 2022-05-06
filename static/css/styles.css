@@ -8,11 +8,12 @@ button {
     height: 40px;
     width: 100px;
     color: azure;
-    font-size: 15px;
+    font-size: 15px;   
 }
 
 a {
     text-decoration: none;
+    
 }
 
 .cuerpo,
@@ -21,6 +22,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cuerpo button{
+    cursor: pointer;
 }
 
 .logo img{
