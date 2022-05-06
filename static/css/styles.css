@@ -16,8 +16,16 @@ a {
 }
 
 .cuerpo,
-.hijos {
+.hijos 
+.logo{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.logo img{
+    padding: 15%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 200px
 }
