@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Cliente</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+</head>
+<body>
+    <h3>Datos del Cliente</h3>
+    <p>Nombre: {{ cliente.0 }} </p>
+    <p>Edad: {{ cliente.1 }} </p>
+</body>
+</html>
