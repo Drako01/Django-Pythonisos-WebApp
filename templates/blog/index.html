@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="es">
 
 <head>
@@ -6,34 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
 </head>
 
-<body>
-    <style>
-        body {
-            background: rgb(215, 215, 215);
-        }
-
-        button {
-            background: rgb(1, 86, 99);
-            border-radius: 10px;
-            height: 40px;
-            width: 100px;
-            color: azure;
-            font-size: 15px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .cuerpo,
-        .hijos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    </style>
+<body>    
     </br>
     <div class="cuerpo">
         <h1>¡Bienvenido {{ nombre }}!</h1>
@@ -53,7 +30,7 @@
         <h3>Usted No tiene Hijos.!!!</h3>
         {% endif %}
         </br>
-        <h2>Los nombres de los Hijos son:</h2>
+        <h2>Su Familia esta compuesta por:</h2>
         <h3>
             <ul>
                 {% for hijo in hijos %}

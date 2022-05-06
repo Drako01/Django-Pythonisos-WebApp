@@ -9,33 +9,26 @@ def index(request):
         "nombre": "Alejandro",
         "edad": 46,
         "direccion": {"calle": "Cuchuflito 2112", "localidad": "Quilmes Oeste", "provincia": "Buenos Aires", "pais": "Argentina"},
-        "cant_hijos": 3,
-        "hijos":["Alejandro", "Fede", "Lola"],
+        "cant_hijos": 2,
+        "hijos":["Alejandro", "Barbara", "Fede", "Lola", "Daisy"],
     }
     return render(request, "blog/index.html", dato)
 
 def acerca_de(request):
     return render(request, "blog/acerca-de.html")
 
-def clientes(request):
+def clientes(request, template_name="blog/clientes.html"):
     conn = sqlite3.connect('contabilidad.sqlite')
     cliente = conn.cursor()
-    cliente.execute("select nombre, edad from personas")
-    html = """
-            <html>
-            <title> Lista de Clientes </title>
-            <table style="border: 2px solid; background: yellow">
-            <thead>
-                <tr>
-                <th> Nombre </th>
-                <th> Edad </th>
-                </thead>
-            """
-    for (nombre, edad) in cliente.fetchall():
-        html += "<tr><td>" + nombre + "</td><td>" + str(edad) + "</td></tr>"
-    html += '</table></html>'
+    cliente.execute("select nombre, edad from personas")  
+    cliente_list = cliente.fetchall()  
     conn.close()
-    return HttpResponse(html)
+    dato = {"clientes": cliente_list}
+    return render(request, template_name, dato)
+
+
+
+
 
 def cotizacion_dollar(request):
     r = requests.get('https://api.recursospython.com/dollar')

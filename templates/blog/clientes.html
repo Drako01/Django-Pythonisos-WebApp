@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+</head>
+
+<body>
+    <h2>Lista de Clietes</h2>
+    <table style="border: 1px solid">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        {% for nombre, edad in clientes %}
+        <tr>
+            <td>{{ nombre }}</td>
+            <td>{{ edad }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
