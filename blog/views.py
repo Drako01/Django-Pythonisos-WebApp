@@ -11,7 +11,7 @@ def index(request):
         "edad": 50,
         "direccion": {"calle": "36", "numero": "400" ,"localidad": "La Plata", "provincia": "Buenos Aires", "pais": "Argentina"},
         "cant_hijos": 2,
-        "familia":["Alejandro", "Barbara", "Fede", "Lola", "Daisy"],
+        "familia":["Alejandro", "Marcelo", "Nora", "Oscar", "Juan"],
     }
     return render(request, "blog/index.html", dato)
 
