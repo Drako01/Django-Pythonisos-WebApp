@@ -44,11 +44,11 @@ def cliente(request, nombre_cliente, template_name='blog/cliente.html'):
 
 def comentarios(request, nombre_peli, comentario_numero):
     if (isinstance(comentario_numero, int)):
-        content = {
+        contenido = {
             "nombre_peli": nombre_peli,
             "comentario_numero": comentario_numero
         }
-        return render(request, 'blog/comentarios.html', content)
+        return render(request, 'blog/comentarios.html', contenido)
     return Http404
 
 def cotizacion_dollar(request):
